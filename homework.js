@@ -1,4 +1,4 @@
-/* fourth-demo
+/* fourth-demo*/
 anyArr = [-155, -9, 87, -23, 56, 0, 55, 1];
 sortedArr = anyArr.sort();
 
@@ -11,10 +11,10 @@ debugger;
     return anyArr[0];
 }
 
-minPositiveNum(sortedArr);*/
+minPositiveNum(sortedArr);
 
 
-/* third-demo
+/* third-demo*/
 function isNumberAllDigitsOdd(num) {
 debugger;
     if (num % 10 % 2 === 0){
@@ -26,9 +26,9 @@ debugger;
 
     }
 }
-isNumberAllDigitsOdd(123);*/
-/*
- third
+isNumberAllDigitsOdd(123);
+
+/*third*/
 function isNumberAllDigitsOdd(num) {
     if (num % 2 === 1 && num !== undefined){
         let stringNum = String(num);
@@ -45,10 +45,9 @@ function isNumberAllDigitsOdd(num) {
 }
 
 isNumberAllDigitsOdd(123);
-*/
 
 
-/* second
+/* second*/
 function rangeEvenNumbers(num1, num2) {
     let rangeOfEvenElements = [];
     if (num1 < num2) {
@@ -70,11 +69,10 @@ function rangeEvenNumbers(num1, num2) {
 
 rangeEvenNumbers( 87, 112);
 
-*/
 
 
 
-/* first
+/* first*/
 function getLargerElements(myArray, number) {
     let largerElements = [];
     if (myArray.length !== 0 && typeof number === "number") {
@@ -88,4 +86,3 @@ function getLargerElements(myArray, number) {
 }
 
 getLargerElements([-7, 20, 0, 4, 6, 15, 30, 25, 19], 17);
-*/
