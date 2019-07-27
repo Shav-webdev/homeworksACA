@@ -1,8 +1,24 @@
+/* fifth*/
+function findIndexOfViolatedArr(anyArr = []) {
+    debugger;
+    let lengthOfArr = anyArr.length;
+    let lastOne = lengthOfArr-1;
+    let lastSecond = lengthOfArr-2;
+    if (anyArr[lastOne] > anyArr[lastSecond]) {
+        let popArray = anyArr.pop();
+        return findIndexOfViolatedArr(anyArr);
+    }
+    return anyArr.indexOf(anyArr[lastOne]);
+}
+
+findIndexOfViolatedArr([-155, -99, -87, -23, 56, 0, 55, 65, 101]);
+
+
 /* fourth-demo*/
 anyArr = [-155, -9, 87, -23, 56, 0, 55, 1];
 sortedArr = anyArr.sort();
 
-function minPositiveNum(anyArr) {
+function minPositiveNum(anyArr = []) {
 debugger;
     if (anyArr[0] < 0) {
         let spliceArray = anyArr.splice(0, 1);
@@ -15,7 +31,7 @@ minPositiveNum(sortedArr);
 
 
 /* third-demo*/
-function isNumberAllDigitsOdd(num) {
+function isNumberAllDigitsOdd(num = 0) {
 debugger;
     if (num % 10 % 2 === 0){
         return false;
@@ -48,7 +64,7 @@ isNumberAllDigitsOdd(123);
 
 
 /* second*/
-function rangeEvenNumbers(num1, num2) {
+function rangeEvenNumbers(num1 = 0, num2 = 0) {
     let rangeOfEvenElements = [];
     if (num1 < num2) {
         outer: for (let i = num1; i <= num2; i++) {
