@@ -1,3 +1,23 @@
+/* fourth */
+let salaries = {
+    Pete: 100,
+    Smith: 110,
+    Joe: 180,
+    Jack: 140,
+};
+function invertObjKeysAndValues(obj = {}) {
+    let invertedObj = {};
+    for (let key in obj){
+        if (obj.hasOwnProperty(key) || obj[key] !== undefined) {
+            let value = obj[key];
+            invertedObj[value] = key;
+        }
+    }
+    return invertedObj;
+}
+
+console.log(invertObjKeysAndValues(salaries));
+
 /* third*/
 function sumOfDigits(num = 0) {
 	let result = 0;
@@ -27,7 +47,6 @@ function concatNestedArrays(arr = [], i = 0) {
             numsArr.push( arr[i] );
             return concatNestedArrays(arr, i +1);
         }
-
     }
     return numsArr;
 }
