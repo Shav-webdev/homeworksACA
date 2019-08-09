@@ -63,7 +63,6 @@ removeRepeatNums([1, 2, 3, 3, 2, 5]);
 /*    with method
  Please say what is wrong here?*/
 let initialArr = [1, 2, 3, 3, 2, 5];
-debugger;
 let onceElem = [];
 onceElem = initialArr.filter(function(currentValue) {
     return !onceElem.includes(currentValue);
@@ -87,3 +86,12 @@ function multiplyNeighbours(arr = [], i = 0){
 }
 
 multiplyNeighbours([3, 7, 12, 5, 20]);
+
+/*with array method*/
+initialArr = [3, 7, 12, 5, 20, 0];
+multipliedArr = initialArr.map((elem, index) => {
+    return elem * initialArr[index + 1];
+});
+
+multipliedArr.pop();
+console.log(multipliedArr);
